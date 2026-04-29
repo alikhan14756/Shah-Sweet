@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 100% 98%;
+    --foreground: 0 100% 27%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 100% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 100% 27%;
+    --primary: 0 100% 27%;
+    --primary-foreground: 48 100% 50%;
+    --secondary: 48 100% 50%;
+    --secondary-foreground: 0 100% 27%;
+    --muted: 60 20% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 48 100% 50%;
+    --accent-foreground: 0 100% 27%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 30% 85%;
+    --input: 0 30% 90%;
+    --ring: 48 100% 50%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 100% 27%;
+    --sidebar-primary: 0 100% 27%;
+    --sidebar-primary-foreground: 48 100% 50%;
+    --sidebar-accent: 48 100% 50%;
+    --sidebar-accent-foreground: 0 100% 27%;
+    --sidebar-border: 0 30% 85%;
+    --sidebar-ring: 48 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-deep-red font-poppins antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+  }
+  .bg-gradient-red {
+    @apply bg-gradient-to-br from-deep-red via-deep-red-light to-deep-red;
+  }
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
